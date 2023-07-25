@@ -42,7 +42,7 @@ public class Passenger implements IID {
 
     @Override
     public int geneID() {
-        Random rand = new Random();
-        return rand.nextInt(100000,10000000);
+        Random rand = new Random(); // gives an 4 digit passenger ID number
+        return rand.nextInt(1000,10000);
     }
 }
