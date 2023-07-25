@@ -2,19 +2,18 @@ package models;
 
 import interfaces.IID;
 
-import java.math.BigInteger;
 import java.util.Random;
 
 public class Passenger implements IID {
 
     String name;
     String phoneNumber;
-    String passID; // this one is passenger name + geneID
+    String passportNumber; // this one is passenger name + geneID
 
     public Passenger(String name, String phoneNumber){
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.passID = "";
+        this.passportNumber = "";
     }
 
     public String getName() {
@@ -33,17 +32,13 @@ public class Passenger implements IID {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getPassID() {
-        return passID;
-    }
-
-    public void setPassID() {
-        this.passID = this.name + geneID();
+    public String getPassportNumber() {
+        return passportNumber;
     }
 
     @Override
-    public int geneID() {
-        Random rand = new Random(); // gives an 4 digit passenger ID number
-        return rand.nextInt(1000,10000);
+    public void generateId() {
+        Random rand = new Random();
+        passportNumber = name + rand.nextInt(1000,10000);
     }
 }

@@ -10,8 +10,6 @@ public class PassengerTest {
     @BeforeEach
     public void setUp(){
         passenger = new Passenger("Tarek","07748598697");
-        passenger.setPassID();
-
     }
     @Test
     public void canGetName(){
@@ -34,21 +32,10 @@ public class PassengerTest {
     }
 
     @Test
-    public void canGetPId(){
-        System.out.println("Get passenger ID: "+passenger.getPassID());
-
-    }
-    @Test
-    public void canSetPId(){
-        Passenger p2 = new Passenger("Sarah","07212121212");
-        p2.setPassID();
-        System.out.println("Set passenger ID: "+p2.getPassID());
-    }
-
-    @Test
     public void canGeneID(){
-        passenger.geneID();
-        System.out.println("Unique ID :" + passenger.geneID());
-
+        String beforeAssignment = passenger.getPassportNumber();
+        passenger.generateId();
+        String afterAssigment = passenger.getPassportNumber();
+        assertThat(beforeAssignment).isNotEqualTo(afterAssigment);
     }
 }

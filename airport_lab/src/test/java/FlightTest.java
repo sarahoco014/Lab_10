@@ -11,7 +11,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class FlightTest {
 
     Flight flight;
-    Passenger passenger;
 
     @BeforeEach
     public void setUp() {
@@ -35,12 +34,6 @@ public class FlightTest {
     }
 
     @Test
-    public void canSetFlightId() {
-        flight.setFlightId();
-        System.out.println("Unique Flight ID: "+flight.getFlightId());
-    }
-
-    @Test
     public void canGetPassList() {
         ArrayList<Passenger> expected = new ArrayList<>();
         assertThat(flight.getPassList().size()).isEqualTo(expected.size());
@@ -58,8 +51,10 @@ public class FlightTest {
     }
 
     @Test
-    public void canGeneID() {
-        flight.geneID();
-        System.out.println("Unique ID :" + flight.geneID());
+    public void canGeneID(){
+        int beforeAssignment = flight.getFlightId();
+        flight.generateId();
+        int afterAssigment = flight.getFlightId();
+        assertThat(beforeAssignment).isNotEqualTo(afterAssigment);
     }
 }

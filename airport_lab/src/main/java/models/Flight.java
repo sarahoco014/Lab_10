@@ -29,10 +29,6 @@ public class Flight implements IID {
         return flightId;
     }
 
-    public void setFlightId() {
-        this.flightId = geneID();
-    }
-
     public ArrayList<Passenger> getPassList() {
         return passList;
     }
@@ -41,9 +37,9 @@ public class Flight implements IID {
         this.passList.add(passenger);
     }
 
-    public int geneID() {
+    @Override
+    public void generateId() {
         Random rand = new Random();
-        return rand.nextInt(100_000, 1_000_000);
+        flightId = rand.nextInt(1000,10000);
     }
-
 }
