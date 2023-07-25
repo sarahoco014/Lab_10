@@ -2,15 +2,16 @@ package models;
 
 import interfaces.IID;
 
+import java.math.BigInteger;
 import java.util.Random;
 
 public class Passenger implements IID {
 
     String name;
-    int phoneNumber;
+    String phoneNumber;
     String passID; // this one is passenger name + geneID
 
-    public Passenger(String name, int phoneNumber){
+    public Passenger(String name, String phoneNumber){
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.passID = "";
@@ -24,11 +25,11 @@ public class Passenger implements IID {
         this.name = name;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -36,8 +37,8 @@ public class Passenger implements IID {
         return passID;
     }
 
-    public void setPassID(String passID) {
-        this.passID = passID;
+    public void setPassID() {
+        this.passID = this.name + geneID();
     }
 
     @Override
