@@ -14,6 +14,7 @@ public class Flight implements IID {
     public Flight(String destination, int flightId) {
         this.destination = destination;
         this.flightId = flightId;
+        passList = new ArrayList<>();
     }
 
     public String getDestination() {
@@ -28,7 +29,7 @@ public class Flight implements IID {
         return flightId;
     }
 
-    public void setFlightId(int id) {
+    public void setFlightId() {
         this.flightId = geneID();
     }
 

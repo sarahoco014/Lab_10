@@ -38,7 +38,7 @@ public class Airport {
         this.flights.add(flight);
     }
 
-    public void cancelFlight(String ) {
+    public void cancelFlight() {
 
     }
 

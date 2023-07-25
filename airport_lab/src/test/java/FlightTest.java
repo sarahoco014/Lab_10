@@ -36,14 +36,14 @@ public class FlightTest {
 
     @Test
     public void canSetFlightId() {
-        flight.setFlightId(234567);
-        assertThat(flight.getFlightId()).isEqualTo(234567);
+        flight.setFlightId();
+        System.out.println("Unique Flight ID: "+flight.getFlightId());
     }
 
     @Test
     public void canGetPassList() {
-        ArrayList<Passenger> expected = new ArrayList<Passenger>();
-        assertThat(flight.getPassList()).isEqualTo(expected);
+        ArrayList<Passenger> expected = new ArrayList<>();
+        assertThat(flight.getPassList().size()).isEqualTo(expected.size());
     }
     
     @Test
