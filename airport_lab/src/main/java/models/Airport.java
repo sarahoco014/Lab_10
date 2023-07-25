@@ -7,9 +7,9 @@ public class Airport {
     private String airportName;
     private ArrayList<Flight> flights;
 
-    public Airport(String airportName, ArrayList<Flight> flights) {
+    public Airport(String airportName) {
         this.airportName = airportName;
-        this.flights = flights;
+        this.flights = new ArrayList<>();
     }
 
     public String getAirportName() {
@@ -22,10 +22,6 @@ public class Airport {
 
     public ArrayList<Flight> getFlights() {
         return flights;
-    }
-
-    public void setFlights(ArrayList<Flight> flights) {
-        this.flights = flights;
     }
 
     public void displayAllFlights() {

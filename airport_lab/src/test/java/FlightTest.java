@@ -52,7 +52,7 @@ public class FlightTest {
         ArrayList<Passenger> expected = new ArrayList<Passenger>();
         expected.add(passenger1);
 
-        flight.addPassList(passenger1);
+        flight.addPassenger(passenger1);
 
         assertThat(flight.getPassList()).isEqualTo(expected);
     }

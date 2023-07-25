@@ -37,7 +37,7 @@ public class Flight implements IID {
         return passList;
     }
 
-    public void addPassList(Passenger passenger) {
+    public void addPassenger(Passenger passenger) {
         this.passList.add(passenger);
     }
 
