@@ -39,7 +39,7 @@ public class Airport {
     }
 
     public void cancelFlight(String ) {
-        
+
     }
 
 }

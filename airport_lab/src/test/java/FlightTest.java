@@ -48,16 +48,17 @@ public class FlightTest {
 
     @Test
     public void canSetPassList() {
-        Passenger passenger1 = new Passenger("Tarek", 3456789);
+        Passenger passenger1 = new Passenger("Tarek", "3456789");
         ArrayList<Passenger> expected = new ArrayList<Passenger>();
         expected.add(passenger1);
 
         flight.setPassList();
+        assertThat(flight.getPassList()).isEqualTo(expected);
     }
 
     @Test
     public void canAddPassList() {
-        Passenger passenger1 = new Passenger("Tarek", 456789);
+        Passenger passenger1 = new Passenger("Tarek", "456789");
         ArrayList<Passenger> expected = new ArrayList<Passenger>();
         expected.add(passenger1);
 
