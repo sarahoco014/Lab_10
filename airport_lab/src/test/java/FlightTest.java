@@ -48,7 +48,7 @@ public class FlightTest {
 
     @Test
     public void canSetPassList() {
-        Passenger passenger1 = new Passenger("Tarek", 456789);
+        Passenger passenger1 = new Passenger("Tarek", 3456789);
         ArrayList<Passenger> expected = new ArrayList<Passenger>();
         expected.add(passenger1);
 
@@ -68,9 +68,7 @@ public class FlightTest {
 
     @Test
     public void canGeneID() {
-
+        flight.geneID();
+        System.out.println("Unique ID :" + flight.geneID());
     }
-
-
-
 }
