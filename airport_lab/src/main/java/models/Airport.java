@@ -38,8 +38,26 @@ public class Airport {
         this.flights.add(flight);
     }
 
-    public void cancelFlight() {
+//    public void cancelFlight(String PassengerID, int FlightID) {
+//        // loop through the for loop
+//
+//        for (int i = 0; i < flights.size(); i++) {
+//
+//            // check conditions are true
+//            if(PassengerID.equals(flights.get(i).getPassList().)){
+//
+//            }
+//
+//
+//        }
+//        // check conditions are true
+//    }
 
+    public void searchFlight(String Destination){
+        for (int i = 0; i <flights.size() ; i++) {
+            if(Destination.equals(flights.get(i).getDestination())){
+                System.out.println( flights.get(i).toString());
+            }
+        }
     }
-
 }
