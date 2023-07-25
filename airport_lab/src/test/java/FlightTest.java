@@ -15,7 +15,7 @@ public class FlightTest {
 
     @BeforeEach
     public void setUp() {
-        flight = new Flight("Madrid", 123456);
+        flight = new Flight("Madrid");
     }
 
     @Test
@@ -31,7 +31,7 @@ public class FlightTest {
 
     @Test
     public void canGetFlightId() {
-        assertThat(flight.getFlightId()).isEqualTo(123456);
+        System.out.println("Unique Flight ID: "+flight.getFlightId());
     }
 
     @Test

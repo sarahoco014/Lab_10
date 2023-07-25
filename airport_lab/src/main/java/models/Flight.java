@@ -11,9 +11,9 @@ public class Flight implements IID {
     private int flightId;
     private ArrayList<Passenger> passList;
 
-    public Flight(String destination, int flightId) {
+    public Flight(String destination) {
         this.destination = destination;
-        this.flightId = flightId;
+        this.flightId = 0;
         passList = new ArrayList<>();
     }
 
