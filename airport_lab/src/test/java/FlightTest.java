@@ -33,7 +33,7 @@ public class FlightTest {
     public void canSetFlightId() {
 
     }
-    
+
     @Test
     public void canGetPassList() {
 
