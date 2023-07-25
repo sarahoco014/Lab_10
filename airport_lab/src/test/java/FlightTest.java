@@ -36,7 +36,7 @@ public class FlightTest {
     @Test
     public void canGetPassList() {
         ArrayList<Passenger> expected = new ArrayList<>();
-        assertThat(flight.getPassList().size()).isEqualTo(expected.size());
+        assertThat(flight.getPassList()).isEqualTo(expected);
     }
     
     @Test
