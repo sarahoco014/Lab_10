@@ -12,48 +12,46 @@ public class Airport {
         this.flights = new ArrayList<>();
     }
 
-    public String getAirportName() {
-        return airportName;
-    }
-
-    public void setAirportName(String airportName) {
-        this.airportName = airportName;
-    }
-
     public ArrayList<Flight> getFlights() {
         return flights;
-    }
-
-    public void displayAllFlights() {
-        for(int i = 0; i < flights.size(); i++){
-            System.out.println(flights.get(i));
-        }
     }
 
     public void addFlight(Flight flight) {
         this.flights.add(flight);
     }
 
-//    public void cancelFlight(String PassengerID, int FlightID) {
-//        // loop through the for loop
-//
-//        for (int i = 0; i < flights.size(); i++) {
-//
-//            // check conditions are true
-//            if(PassengerID.equals(flights.get(i).getPassList().)){
-//
-//            }
-//
-//
-//        }
-//        // check conditions are true
-//    }
+    public String displayFlightDetails() {
+        String flightInfo = "";
+        for (Flight flight : this.flights) {
+            flightInfo += "Flight " + flight.getFlightId() + " to " + flight.getDestination() + ", ";
+        }
+        return flightInfo;
+    }
 
-    public void searchFlight(String Destination){
-        for (int i = 0; i <flights.size() ; i++) {
-            if(Destination.equals(flights.get(i).getDestination())){
-                System.out.println( flights.get(i).toString());
+    public int getFlightCount() {
+        return this.flights.size();
+    }
+
+    public void bookPassengerOnToFlight(Flight flight, Passenger passenger) {
+        for (int i = 0; i < flights.size(); i++) {
+            if (flight.equals(flight.getFlightId()) && passenger.getName().equals(passenger)) {
+                flight.addPassenger(passenger);
+            } else {
+                System.out.println("Please enter a valid Flight ID or name.");
+            }
+        }
+    }
+
+    public void cancelFlight(Flight flight, Passenger passenger) {
+        for (int i = 0; i < flights.size(); i++) {
+            if (flights.get(i).equals(flight)) {
+                if(flights.get(i).getPassList().equals(passenger)) {
+                    flight.addPassenger(passenger);
+                }
+            } else {
+                System.out.println("Please enter a valid Flight ID or name.");
             }
         }
     }
 }
+

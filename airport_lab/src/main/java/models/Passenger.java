@@ -8,7 +8,7 @@ public class Passenger implements IID {
 
     String name;
     String phoneNumber;
-    String passportNumber; // this one is passenger name + geneID
+    String passportNumber;
 
     public Passenger(String name, String phoneNumber){
         this.name = name;

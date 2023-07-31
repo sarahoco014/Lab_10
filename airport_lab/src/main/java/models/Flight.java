@@ -14,7 +14,7 @@ public class Flight implements IID {
     public Flight(String destination, int flightId) {
         this.destination = destination;
         this.flightId = flightId;
-        passList = new ArrayList<>();
+        this.passList = new ArrayList<Passenger>();
     }
 
     public String getDestination() {
@@ -35,6 +35,10 @@ public class Flight implements IID {
 
     public void addPassenger(Passenger passenger) {
         this.passList.add(passenger);
+    }
+
+    public void removePassenger(Passenger passenger) {
+        this.passList.remove(passenger);
     }
 
     @Override
